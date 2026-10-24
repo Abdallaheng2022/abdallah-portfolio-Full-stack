@@ -5,16 +5,16 @@ export const PROFILE = {
   role: "Full Stack Developer",
   headline: "I build web apps from the interface down to the data.",
   intro:
-    "I write React front ends, Python APIs with FastAPI, and the data and AI layers behind them. I have an MSc in Computer Engineering and a background in data science and NLP, so I'm comfortable going from a component to an endpoint to a search index in the same project.",
+    "I write React front ends, Python APIs with FastAPI, and the data and AI layers behind them. I have an MSc in Computer Engineering from Bahçeşehir University and years of freelance data science work, so I'm comfortable going from a component to an endpoint to a database in the same project.",
   location: "Istanbul, Türkiye",
 };
 
 export const LINKS = {
   github: "https://github.com/Abdallaheng2022",
   linkedin: "https://www.linkedin.com/in/abdallah-elbohy-b2b2aa113/",
-  email: "abdallah.ramzy.elbohy.96@gmail.com",
-  resume:
-    "https://drive.google.com/file/d/1mXMd_wh1gny7rHMkFv0poEdwnciy2I0g/view?usp=sharing",
+  email: "abdallah.ramzy.albohy.96@gmail.com",
+  // The PDF lives in public/ and is published with the site.
+  resume: `${import.meta.env.BASE_URL}Abdallah_Elbohy_CV_Full_Stack.pdf`,
 };
 
 export type Layer = "ui" | "api" | "data";
@@ -22,7 +22,7 @@ export type Layer = "ui" | "api" | "data";
 export const LAYERS: Record<Layer, { name: string; tools: string[] }> = {
   ui: {
     name: "Interface",
-    tools: ["React", "TypeScript", "Tailwind CSS", "React Router"],
+    tools: ["React", "JavaScript", "TypeScript", "Tailwind CSS"],
   },
   api: {
     name: "API",
@@ -30,7 +30,7 @@ export const LAYERS: Record<Layer, { name: string; tools: string[] }> = {
   },
   data: {
     name: "Data & AI",
-    tools: ["FAISS", "Qdrant", "LangGraph", "MLflow"],
+    tools: ["SQL / MySQL", "Supabase", "FAISS", "LangGraph"],
   },
 };
 
@@ -43,12 +43,13 @@ export type Project = {
   stack: string[];
   repo?: string;
   demo?: string;
+  demoLabel?: string;
 };
 
 export const PROJECTS: Project[] = [
   {
     title: "BelgeNavi",
-    year: "2025",
+    year: "2024 – 2025",
     summary:
       "An assistant for Turkish paperwork, such as residence permits, address registration and company records. Ask a question in Turkish, English or Arabic and get a checklist where every step links to its official source.",
     highlights: [
@@ -58,8 +59,8 @@ export const PROJECTS: Project[] = [
       "Tracing with Langfuse and answer-quality checks with RAGAS and MLflow",
     ],
     layers: ["ui", "api", "data"],
-    stack: ["Python", "FastAPI", "LangGraph", "LangChain", "FAISS", "Qdrant"],
-    repo: LINKS.github,
+    stack: ["Python", "FastAPI", "Streamlit", "LangGraph", "LangChain", "FAISS", "Qdrant", "Docker"],
+    repo: "https://github.com/Abdallaheng2022/BelgeNavi-Ikemat-assistant",
   },
   {
     title: "TrialMatch",
@@ -74,10 +75,28 @@ export const PROJECTS: Project[] = [
     ],
     layers: ["ui", "api", "data"],
     stack: ["Python", "FastAPI", "Streamlit", "FAISS"],
-    repo: LINKS.github,
+    repo: "https://github.com/Abdallaheng2022/Trial-and-matcher-assitant",
+  },
+  {
+    title: "Multi-modal Medical Assistant",
+    year: "2024 – 2025",
+    summary:
+      "Upload a medical report as a PDF or scan, plus an optional image such as an X-ray, then ask questions about it in a chat. Answers are grounded in the text pulled from your documents.",
+    highlights: [
+      "Streamlit app with model, temperature and chat history controls, and live streamed answers",
+      "OCR with Azure Document Intelligence, plus GPT-4o to clean up the extracted text and read images",
+      "Hybrid chunking: paragraphs and tables kept whole, plus fixed-size windows for better recall",
+      "Switchable vector store: FAISS locally or Azure AI Search in the cloud, with create, save, load and delete",
+    ],
+    layers: ["ui", "data"],
+    stack: ["Python", "Streamlit", "LangChain", "FAISS", "Azure AI Search", "Azure Document Intelligence", "OpenAI"],
+    repo: "https://github.com/Abdallaheng2022/Multi-modal_Medical_Assistant",
+    demo: "https://drive.google.com/file/d/18nAMFV3y-Kr0JLwqpgWGhJYANnNMrz9S/view?usp=sharing",
+    demoLabel: "Watch demo video",
   },
   {
     title: "All Around the World",
+    year: "2026",
     summary:
       "Browse every country by flag, population, region and capital. Search by name, filter by region, and open a country to see its currencies, languages and sub-region.",
     highlights: [
@@ -87,10 +106,11 @@ export const PROJECTS: Project[] = [
     ],
     layers: ["ui", "api"],
     stack: ["React 19", "React Router", "Tailwind CSS 4", "Vite"],
-    repo: "https://github.com/Abdallaheng2022/All_around_the_world",
+    repo: "https://github.com/Abdallaheng2022/All_Around_WORLD",
   },
   {
     title: "Calorie Tracker",
+    year: "2026",
     summary:
       "Log meals and see your calorie total for any day. Records are saved in the browser, so they're still there after a reload.",
     highlights: [
@@ -100,7 +120,7 @@ export const PROJECTS: Project[] = [
     ],
     layers: ["ui"],
     stack: ["React 19", "React Router 7", "CSS Modules", "localStorage"],
-    repo: "https://github.com/Abdallaheng2022/calorie-tracker",
+    repo: "https://github.com/Abdallaheng2022/Calorie_Tracker",
   },
 ];
 
@@ -110,51 +130,66 @@ export const SKILLS: { group: string; layer?: Layer; items: string[] }[] = [
     layer: "ui",
     items: [
       "React",
-      "TypeScript",
-      "JavaScript",
       "React Router",
-      "Hooks, Context and reducers",
+      "JavaScript (ES6+)",
+      "TypeScript",
+      "HTML5",
+      "CSS3",
+      "Responsive design",
       "Tailwind CSS",
       "CSS Modules",
-      "styled-components",
+      "REST API integration",
       "Vite",
     ],
   },
   {
     group: "Back end",
     layer: "api",
-    items: ["Python", "FastAPI", "REST API design", "Docker", "Airflow", "Streamlit"],
+    items: ["Python", "FastAPI", "REST API design", "Streamlit", "Docker", "Kubernetes", "Airflow"],
   },
   {
     group: "Data & AI",
     layer: "data",
     items: [
+      "SQL / MySQL",
+      "Supabase",
       "FAISS",
       "Qdrant",
-      "LangGraph",
       "LangChain",
+      "LangGraph",
       "Hugging Face",
       "PyTorch",
       "TensorFlow",
-      "MLflow",
-      "Langfuse",
+      "scikit-learn",
+      "Pandas",
     ],
   },
   {
-    group: "Workflow",
-    items: ["Git and GitHub", "GitHub Actions", "Oxlint", "Linux"],
+    group: "Cloud & tools",
+    items: ["Git and GitHub", "GitHub Actions", "npm", "Azure", "Google Cloud", "Terraform", "Langfuse"],
   },
 ];
 
 export const EXPERIENCE = [
   {
-    title: "Full Stack & AI Developer (independent)",
-    period: "2024 – 2025",
+    title: "Junior Data Scientist (freelance)",
+    org: "Upwork, remote",
+    period: "2018 – present",
     points: [
-      "Built and shipped multilingual web apps end to end: FastAPI back ends, simple web front ends, and search over curated data.",
-      "Designed clear API contracts and added tracing so problems could be found quickly.",
-      "Kept data fresh with expiry rules and \"last checked\" dates on every source.",
-      "Wrote demos and documentation ready for production hardening.",
+      "Build and deploy machine learning and deep learning models for international clients.",
+      "Run the full data workflow: collection, cleaning, scaling and modeling.",
+      "Delivered projects including breast cancer clustering and market text classification.",
+      "Keep a consistent 5/5 client rating by meeting deadlines.",
+    ],
+  },
+  {
+    title: "NLP Engineering Intern",
+    org: "Hattya, Bahrain",
+    period: "2019",
+    points: [
+      "Built and optimized OCR systems for Arabic text documents.",
+      "Cleaned, preprocessed and annotated large text datasets.",
+      "Trained and validated NLP models and helped integrate them into live workflows.",
     ],
   },
 ];
@@ -162,6 +197,15 @@ export const EXPERIENCE = [
 export const EDUCATION = [
   {
     title: "MSc in Computer Engineering",
-    detail: "Graduate study in data science, NLP and applied machine learning.",
+    org: "Bahçeşehir University (BAU), Istanbul",
+    period: "2026",
+    detail:
+      "Thesis: multilingual LLM mind-map generation from text in English, Arabic and Turkish.",
+  },
+  {
+    title: "BSc in Computer Science",
+    org: "Helwan University, Cairo",
+    period: "2018",
+    detail: "Thesis: Arabic and English poetry meter detection using RNNs.",
   },
 ];

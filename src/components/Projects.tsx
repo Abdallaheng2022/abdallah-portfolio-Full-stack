@@ -73,7 +73,7 @@ export default function Projects() {
                 <div className="mt-4 flex gap-5 text-sm">
                   {p.demo && (
                     <a href={p.demo} target="_blank" rel="noreferrer" className="link">
-                      Open live demo
+                      {p.demoLabel ?? "Open live demo"}
                     </a>
                   )}
                   {p.repo && (

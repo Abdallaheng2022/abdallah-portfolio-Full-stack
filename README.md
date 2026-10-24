@@ -7,7 +7,7 @@ My personal portfolio site. It shows my full stack and AI projects, my skills ac
 ![Vite](https://img.shields.io/badge/Vite-5-646CFF?logo=vite&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3-06B6D4?logo=tailwindcss&logoColor=white)
 
-**Live site:** https://abdallaheng2022.github.io/abdallah-portfolio/
+**Live site:** https://abdallaheng2022.github.io/abdallah-portfolio-Full-stack/
 
 ## Features
 
@@ -30,8 +30,8 @@ My personal portfolio site. It shows my full stack and AI projects, my skills ac
 You need [Node.js](https://nodejs.org/) 20 or newer.
 
 ```bash
-git clone https://github.com/Abdallaheng2022/abdallah-portfolio.git
-cd abdallah-portfolio
+git clone https://github.com/Abdallaheng2022/abdallah-portfolio-Full-stack.git
+cd abdallah-portfolio-Full-stack
 npm install
 npm run dev
 ```
