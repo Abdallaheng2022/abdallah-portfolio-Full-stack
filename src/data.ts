@@ -109,6 +109,22 @@ export const PROJECTS: Project[] = [
     repo: "https://github.com/Abdallaheng2022/All_Around_WORLD",
   },
   {
+    title: "News Feed",
+    year: "2026",
+    summary:
+      "Read today's top stories from the last 24 hours. Search headlines as you type, filter by topics such as politics, tech, sport or health, and page through the results.",
+    highlights: [
+      "Live headlines from a public news REST API, one article per story",
+      "Search is debounced, and every new keystroke cancels the request still in flight with AbortController",
+      "Twelve category filters and Previous / Next paging by offset",
+      "Skeleton cards while loading, plus clear error and empty states",
+    ],
+    layers: ["ui", "api"],
+    stack: ["React 19", "Material UI", "TanStack Query", "Lodash", "Tailwind CSS 4", "Vite"],
+    // TODO: add the GitHub link once the repo is public, e.g.
+    // repo: "https://github.com/Abdallaheng2022/<repo-name>",
+  },
+  {
     title: "Calorie Tracker",
     year: "2026",
     summary:
