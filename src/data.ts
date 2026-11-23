@@ -112,17 +112,16 @@ export const PROJECTS: Project[] = [
     title: "News Feed",
     year: "2026",
     summary:
-      "Read today's top stories from the last 24 hours. Search headlines as you type, filter by topics such as politics, tech, sport or health, and page through the results.",
+      "Read the latest news in 10 languages, including Arabic, English and Turkish, with a right-to-left layout for Arabic and Urdu. Search headlines as you type, filter by twelve topics and page through the results.",
     highlights: [
-      "Live headlines from a public news REST API, one article per story",
+      "Live articles from the NewsData.io REST API, shown as cards with image, summary and author",
       "Search is debounced, and every new keystroke cancels the request still in flight with AbortController",
-      "Twelve category filters and Previous / Next paging by offset",
-      "Skeleton cards while loading, plus clear error and empty states",
+      "Switching language flips the whole feed, including text direction (dir=\"rtl\")",
+      "Twelve category filters, Previous / Next paging, skeleton cards, and clear error and empty states",
     ],
     layers: ["ui", "api"],
     stack: ["React 19", "Material UI", "TanStack Query", "Lodash", "Tailwind CSS 4", "Vite"],
-    // TODO: add the GitHub link once the repo is public, e.g.
-    // repo: "https://github.com/Abdallaheng2022/<repo-name>",
+    repo: "https://github.com/Abdallaheng2022/New-Feed-App",
   },
   {
     title: "Kanban Board",
