@@ -107,6 +107,8 @@ export const PROJECTS: Project[] = [
     layers: ["ui", "api"],
     stack: ["React 19", "React Router", "Tailwind CSS 4", "Vite"],
     repo: "https://github.com/Abdallaheng2022/All_Around_WORLD",
+    demo: "https://github.com/user-attachments/assets/4cf04313-472d-40e3-a0f3-6b469651c856",
+    demoLabel: "Watch demo video",
   },
   {
     title: "News Feed",
@@ -122,6 +124,8 @@ export const PROJECTS: Project[] = [
     layers: ["ui", "api"],
     stack: ["React 19", "Material UI", "TanStack Query", "Lodash", "Tailwind CSS 4", "Vite"],
     repo: "https://github.com/Abdallaheng2022/New-Feed-App",
+    demo: "https://github.com/user-attachments/assets/b94ef71a-df05-43a1-9565-0b8abe581a4a",
+    demoLabel: "Watch demo video",
   },
   {
     title: "Kanban Board",
@@ -137,6 +141,8 @@ export const PROJECTS: Project[] = [
     layers: ["ui"],
     stack: ["React 19", "TypeScript", "dnd-kit", "Radix UI", "Immer", "Tailwind CSS 4", "Vite"],
     repo: "https://github.com/Abdallaheng2022/kanban-board",
+    demo: "https://github.com/user-attachments/assets/796c4905-491d-4511-afaf-38150a973774",
+    demoLabel: "Watch demo video",
   },
   {
     title: "Calorie Tracker",
@@ -151,6 +157,8 @@ export const PROJECTS: Project[] = [
     layers: ["ui"],
     stack: ["React 19", "React Router 7", "CSS Modules", "localStorage"],
     repo: "https://github.com/Abdallaheng2022/Calorie_Tracker",
+    demo: "https://github.com/user-attachments/assets/546a619c-d2a4-4be9-83db-f5e8f93d26d3",
+    demoLabel: "Watch demo video",
   },
 ];
 
