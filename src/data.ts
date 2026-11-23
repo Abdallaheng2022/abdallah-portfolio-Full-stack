@@ -125,6 +125,21 @@ export const PROJECTS: Project[] = [
     // repo: "https://github.com/Abdallaheng2022/<repo-name>",
   },
   {
+    title: "Kanban Board",
+    year: "2026",
+    summary:
+      "Plan work on boards of columns and task cards. Create and switch between boards, edit tasks inline, and drag cards to reorder them or move them to another column.",
+    highlights: [
+      "Drag and drop with dnd-kit: reorder within a column, drop into empty columns, cancel with Esc",
+      "Boards, columns and tasks managed through React Context, with Immer for nested updates",
+      "Everything saved to localStorage and restored on reload, with no back end",
+      "Accessible dialogs and menus built on Radix UI, styled with Tailwind design tokens",
+    ],
+    layers: ["ui"],
+    stack: ["React 19", "TypeScript", "dnd-kit", "Radix UI", "Immer", "Tailwind CSS 4", "Vite"],
+    repo: "https://github.com/Abdallaheng2022/kanban-board",
+  },
+  {
     title: "Calorie Tracker",
     year: "2026",
     summary:
